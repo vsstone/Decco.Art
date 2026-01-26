@@ -2,62 +2,180 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Decco — Where Art Lives and Moves</title>
-  <meta name="description" content="Decco is a distributed art network built into everyday spaces and places." />
+  <meta name="description" content="Decco is a distributed gallery built into everyday spaces and places. Where Art Lives and Moves." />
+  <meta name="theme-color" content="#fbfaf8" />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="Decco — Where Art Lives and Moves" />
+  <meta property="og:description" content="A distributed gallery built into everyday spaces and places." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://decco.art" />
+  <meta property="og:image" content="https://decco.art/assets/Decco%20Logo.png" />
+
+  <!-- Twitter (optional) -->
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <main class="wrap">
-    <header class="hero">
-      <div class="brand">
-        <h1 class="logo">Decco</h1>
-        <p class="tagline">Where Art Lives and Moves.</p>
-      </div>
-    </header>
 
-    <section class="card">
-      <h2>Decco Art Network</h2>
-      <p>
-        A distributed gallery built into everyday spaces and places — coffee shops, markets,
-        hospitality, show homes, and design-forward venues.
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar" role="banner">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Decco home">
+        <img class="brand__logo" src="assets/Decco Logo.png" alt="Decco logo" />
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#artists">Artists</a>
+        <a class="nav__link" href="#hosts">Hosts</a>
+        <a class="nav__link" href="#collect">Collect</a>
+        <a class="nav__link nav__link--pill" id="navApply" href="#">Apply</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" role="main">
+    <section id="top" class="hero" aria-label="Hero">
+      <div class="hero__copy">
+        <p class="kicker">Decco Art Network</p>
+
+        <h1 class="hero__title">Where Art Lives and Moves.</h1>
+
+        <p class="hero__lede">
+          Decco is a distributed gallery built into everyday spaces and places —
+          homes, hospitality, retail, cafés, markets, and design-forward environments where people naturally connect with art.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn" id="ctaArtist" href="#">Apply as an Artist</a>
+          <a class="btn btn--ghost" id="ctaHost" href="#">Host Art</a>
+        </div>
+
+        <div class="meta" aria-label="Contact">
+          <a class="meta__link" href="https://decco.art">Decco.Art</a>
+          <span class="meta__dot" aria-hidden="true">•</span>
+          <a class="meta__link" href="tel:+18438232388">(843) 823-2388</a>
+        </div>
+
+        <div class="micro">
+          <span class="micro__label">Quick action:</span>
+          <a class="micro__link" id="ctaCollectInline" href="#">View / Collect a piece →</a>
+        </div>
+      </div>
+
+      <aside class="placard" aria-label="Placard preview">
+        <div class="placard__card">
+          <div class="placard__top">
+            <div class="placard__mark">Decco</div>
+            <div class="placard__sub">Where Art Lives and Moves</div>
+          </div>
+
+          <div class="placard__line" aria-hidden="true"></div>
+
+          <div class="placard__cta" aria-label="Placard call to action">
+            <span class="placard__strong">View</span>
+            <span class="placard__dot" aria-hidden="true">•</span>
+            <span class="placard__strong">Collect</span>
+          </div>
+
+          <p class="placard__hint">
+            Scan to view details, reserve, or collect.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid" aria-label="Paths">
+      <article class="card" id="artists">
+        <h2 class="card__title">For Artists</h2>
+        <p class="card__text">
+          Get placed into real environments — and into Decco markets and events where art moves.
+          Keep control of pricing. Decco manages presentation and collection flow.
+        </p>
+        <a class="card__link" id="linkArtist" href="#">Apply →</a>
+      </article>
+
+      <article class="card" id="hosts">
+        <h2 class="card__title">For Hosts</h2>
+        <p class="card__text">
+          Elevate your space with curated rotating artwork. No cost. No staffing.
+          If a piece sells, you share in the upside.
+        </p>
+        <a class="card__link" id="linkHost" href="#">Host Art →</a>
+      </article>
+
+      <article class="card" id="collect">
+        <h2 class="card__title">For Collectors</h2>
+        <p class="card__text">
+          Discover art in the world — calm, in context, without pressure.
+          Reserve or collect directly through Decco.
+        </p>
+        <a class="card__link" id="linkCollect" href="#">View Available Work →</a>
+      </article>
+    </section>
+
+    <section class="statement" aria-label="Statement">
+      <h2 class="statement__title">The Idea</h2>
+      <p class="statement__text">
+        Art shouldn’t live only in galleries. It should live where life already happens —
+        and move through the spaces people already love.
       </p>
 
-      <div class="ctaRow">
-        <a class="btn" href="https://decco.art" aria-label="Decco website">Decco.Art</a>
-        <a class="btn btnGhost" href="tel:+18439911548">(843) 991-1548</a>
+      <div class="statement__cta">
+        <a class="btn btn--ghost" id="ctaApplyBottom" href="#">Apply / Get Started</a>
       </div>
     </section>
 
-    <section class="grid">
-      <div class="tile">
-        <h3>For Artists</h3>
-        <p>Get placed. Get seen. Get collected.</p>
-        <a class="link" href="#" id="artistLink">Apply (Tally link)</a>
-      </div>
-      <div class="tile">
-        <h3>For Hosts</h3>
-        <p>Elevate your space with curated work. Upside only.</p>
-        <a class="link" href="#" id="hostLink">Host art</a>
-      </div>
-      <div class="tile">
-        <h3>For Buyers</h3>
-        <p>Discover art in the real world — then collect it.</p>
-        <a class="link" href="#" id="buyerLink">View available work</a>
-      </div>
-    </section>
+    <footer class="footer" aria-label="Footer">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">Decco</div>
+          <div class="footer__small">Where Art Lives and Moves.</div>
+        </div>
 
-    <footer class="footer">
-      <p>© <span id="y"></span> Decco • Decco.Art • (843) 991-1548</p>
+        <div class="footer__right">
+          <a class="footer__link" href="https://decco.art">Decco.Art</a>
+          <span class="footer__dot" aria-hidden="true">•</span>
+          <a class="footer__link" href="tel:+18438232388">(843) 823-2388</a>
+        </div>
+      </div>
     </footer>
   </main>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    // Replace these with your Tally / pages later:
-    document.getElementById("artistLink").href = "https://tally.so/r/REPLACE";
-    document.getElementById("hostLink").href   = "https://tally.so/r/REPLACE";
-    document.getElementById("buyerLink").href  = "https://tally.so/r/REPLACE";
+    // ✅ SET THIS ONCE. Every CTA will route here.
+    const TALLY_URL = "PASTE_YOUR_TALLY_LINK_HERE";
+
+    // Wire all CTAs to Tally
+    const ids = [
+      "navApply",
+      "ctaArtist", "ctaHost",
+      "linkArtist", "linkHost", "linkCollect",
+      "ctaCollectInline",
+      "ctaApplyBottom"
+    ];
+
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.href = TALLY_URL;
+    });
+
+    // Nice UX: smooth scroll for internal anchor links (Artists/Hosts/Collect)
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener("click", (e) => {
+        const href = a.getAttribute("href");
+        if (!href || href === "#" || href === "#top") return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", href);
+      });
+    });
   </script>
 </body>
 </html>
