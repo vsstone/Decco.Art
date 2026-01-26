@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Decco — Where Art Lives and Moves</title>
+  <meta name="description" content="Decco is a distributed art network built into everyday spaces and places." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="brand">
+        <h1 class="logo">Decco</h1>
+        <p class="tagline">Where Art Lives and Moves.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Decco Art Network</h2>
+      <p>
+        A distributed gallery built into everyday spaces and places — coffee shops, markets,
+        hospitality, show homes, and design-forward venues.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn" href="https://decco.art" aria-label="Decco website">Decco.Art</a>
+        <a class="btn btnGhost" href="tel:+18439911548">(843) 991-1548</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="tile">
+        <h3>For Artists</h3>
+        <p>Get placed. Get seen. Get collected.</p>
+        <a class="link" href="#" id="artistLink">Apply (Tally link)</a>
+      </div>
+      <div class="tile">
+        <h3>For Hosts</h3>
+        <p>Elevate your space with curated work. Upside only.</p>
+        <a class="link" href="#" id="hostLink">Host art</a>
+      </div>
+      <div class="tile">
+        <h3>For Buyers</h3>
+        <p>Discover art in the real world — then collect it.</p>
+        <a class="link" href="#" id="buyerLink">View available work</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Decco • Decco.Art • (843) 991-1548</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    // Replace these with your Tally / pages later:
+    document.getElementById("artistLink").href = "https://tally.so/r/REPLACE";
+    document.getElementById("hostLink").href   = "https://tally.so/r/REPLACE";
+    document.getElementById("buyerLink").href  = "https://tally.so/r/REPLACE";
+  </script>
+</body>
+</html>
