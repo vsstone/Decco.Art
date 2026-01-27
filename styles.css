@@ -10,10 +10,6 @@
   --r2: 24px;
 
   --max: 1120px;
-
-  /* Header system */
-  --header-pad-y: 14px;
-  --logo-h: 52px; /* default logo height */
 }
 
 *{ box-sizing: border-box; }
@@ -54,41 +50,31 @@ a:hover{ opacity: .9; }
   top: 0;
   z-index: 50;
   background: rgba(251,247,242,.82);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
-}
-
-/* Backdrop blur (with safe fallback) */
-@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))){
-  .header{
-    background: rgba(251,247,242,.78);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
 }
 
 .header-inner{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
-  padding: var(--header-pad-y) 0;
-  min-height: calc(var(--logo-h) + (var(--header-pad-y) * 2));
+  gap: 12px;
+  padding: 12px 0;
+  flex-wrap: nowrap; /* prevents odd wrapping */
 }
 
 /* Brand */
 .brand{
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
-  min-width: 160px;
+  min-width: 140px;
   flex: 0 0 auto;
 }
 
 .brand-logo{
-  height: var(--logo-h);
+  height: 46px;     /* ✅ bigger, but not crazy */
   width: auto;
-  max-width: none;
-  flex: 0 0 auto;
 }
 
 .brand-fallback{
@@ -99,15 +85,13 @@ a:hover{ opacity: .9; }
 
 /* Nav */
 .nav{
-  display: none;
+  display: none !important; /* ✅ force hidden on mobile */
   gap: 18px;
   color: var(--muted);
   font-size: 14px;
-  flex: 0 1 auto; /* can shrink if needed, but won’t crush brand */
-  white-space: nowrap;
 }
 .nav a{
-  padding: 8px 10px;
+  padding: 8px 8px;
   border-radius: 12px;
 }
 .nav a:hover{
@@ -115,7 +99,6 @@ a:hover{ opacity: .9; }
   color: var(--ink);
 }
 
-/* CTA */
 .header-cta{
   display: flex;
   align-items: center;
@@ -136,10 +119,9 @@ a:hover{ opacity: .9; }
   cursor: pointer;
   user-select: none;
   transition: transform .12s ease, opacity .12s ease;
-  line-height: 1;
+  white-space: nowrap; /* ✅ prevents “Apply / Host” wrapping */
 }
 .btn:active{ transform: translateY(1px); }
-
 .btn-primary{
   background: var(--ink);
   color: #fff;
@@ -161,8 +143,9 @@ h2{
   font-size: 30px;
   letter-spacing: -.2px;
 }
-h3{ font-size: 16px; }
-
+h3{
+  font-size: 16px;
+}
 .lead{
   margin: 10px 0 0 0;
   color: var(--muted);
@@ -170,7 +153,6 @@ h3{ font-size: 16px; }
   max-width: 70ch;
 }
 .muted{ color: var(--muted); }
-
 .fineprint{
   margin: 12px 0 0 0;
   font-size: 12px;
@@ -185,7 +167,6 @@ h3{ font-size: 16px; }
   gap: 16px;
   align-items: start;
 }
-
 .hero-copy{
   background: rgba(255,255,255,.78);
   border: 1px solid rgba(255,255,255,.7);
@@ -193,7 +174,6 @@ h3{ font-size: 16px; }
   box-shadow: var(--shadow);
   padding: 18px 16px;
 }
-
 .eyebrow{
   margin: 0 0 8px 0;
   color: var(--muted);
@@ -201,27 +181,23 @@ h3{ font-size: 16px; }
   letter-spacing: .12em;
   text-transform: uppercase;
 }
-
 .hero-title{
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 38px;
   letter-spacing: -.4px;
 }
-
 .hero-subtitle{
   margin: 10px 0 0 0;
   color: var(--muted);
   font-size: 16px;
   max-width: 65ch;
 }
-
 .hero-actions{
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 16px;
 }
-
 .hero-meta{
   list-style: none;
   padding: 0;
@@ -229,7 +205,6 @@ h3{ font-size: 16px; }
   display: grid;
   gap: 10px;
 }
-
 .meta-label{
   display: inline-block;
   min-width: 70px;
@@ -247,13 +222,11 @@ h3{ font-size: 16px; }
   box-shadow: var(--shadow);
   border: 1px solid var(--line);
 }
-
 .hero-media img{
   width: 100%;
   height: 360px;
   object-fit: cover;
 }
-
 .hero-badge{
   position: absolute;
   left: 14px;
@@ -268,7 +241,6 @@ h3{ font-size: 16px; }
   font-size: 13px;
   color: var(--ink);
 }
-
 .hero-badge .dot{
   width: 10px;
   height: 10px;
@@ -279,13 +251,11 @@ h3{ font-size: 16px; }
 
 /* Sections */
 .section{ padding: 44px 0; }
-
 .section-soft{
   background: rgba(255,255,255,.35);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-
 .section-head{ margin-bottom: 18px; }
 
 /* Cards */
@@ -295,19 +265,16 @@ h3{ font-size: 16px; }
   gap: 14px;
   margin-top: 18px;
 }
-
 .card{
   background: rgba(255,255,255,.75);
   border: 1px solid var(--line);
   border-radius: var(--r);
   padding: 16px;
 }
-
 .card p{
   margin: 8px 0 12px 0;
   color: var(--muted);
 }
-
 .card ul{
   margin: 0;
   padding-left: 18px;
@@ -321,7 +288,6 @@ h3{ font-size: 16px; }
   gap: 12px;
   margin-top: 18px;
 }
-
 .step{
   display: grid;
   grid-template-columns: 40px 1fr;
@@ -331,7 +297,6 @@ h3{ font-size: 16px; }
   border: 1px solid var(--line);
   background: rgba(255,255,255,.7);
 }
-
 .step-num{
   width: 40px; height: 40px;
   border-radius: 999px;
@@ -341,7 +306,6 @@ h3{ font-size: 16px; }
   color: #fff;
   font-weight: 800;
 }
-
 .step-body p{ margin: 6px 0 0 0; color: var(--muted); }
 
 .center{ display: flex; justify-content: center; margin-top: 18px; }
@@ -353,7 +317,6 @@ h3{ font-size: 16px; }
   gap: 14px;
   margin-top: 18px;
 }
-
 .figure{
   margin: 0;
   background: rgba(255,255,255,.75);
@@ -361,13 +324,11 @@ h3{ font-size: 16px; }
   border-radius: var(--r);
   overflow: hidden;
 }
-
 .figure img{
   width: 100%;
   height: 320px;
   object-fit: cover;
 }
-
 .figure figcaption{
   padding: 12px 14px;
   font-size: 13px;
@@ -381,7 +342,6 @@ h3{ font-size: 16px; }
   gap: 14px;
   align-items: start;
 }
-
 .contact-box{
   background: rgba(255,255,255,.75);
   border: 1px solid var(--line);
@@ -389,13 +349,11 @@ h3{ font-size: 16px; }
   padding: 16px;
   box-shadow: var(--shadow);
 }
-
 .contact-meta{
   margin-top: 14px;
   display: grid;
   gap: 10px;
 }
-
 .contact-meta > div{
   display: flex;
   justify-content: space-between;
@@ -417,25 +375,15 @@ h3{ font-size: 16px; }
 }
 .sep{ opacity: .6; padding: 0 8px; }
 
-/* Mobile-first header tuning (logo system) */
-@media (max-width: 860px){
-  :root{
-    --logo-h: 46px;
-    --header-pad-y: 12px;
-  }
-}
-
-/* Very small phones */
+/* Small phones: slightly smaller logo and tighter button so header stays clean */
 @media (max-width: 420px){
-  :root{
-    --logo-h: 42px;
-    --header-pad-y: 10px;
-  }
+  .brand-logo{ height: 42px; }
+  .btn{ padding: 11px 14px; font-size: 13px; }
 }
 
 /* Desktop */
 @media (min-width: 860px){
-  .nav{ display: flex; }
+  .nav{ display: flex !important; } /* show nav only on desktop */
   .hero-grid{ grid-template-columns: 1.1fr .9fr; gap: 18px; align-items: stretch; }
   .hero-copy{ padding: 22px 22px; }
   .hero-title{ font-size: 52px; }
