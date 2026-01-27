@@ -1,225 +1,251 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Decco — Where Art Lives and Moves</title>
-  <meta name="description" content="Decco is a distributed gallery built into everyday spaces and places. Where art lives and moves." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
 
-  <!-- Social preview -->
+  <title>Decco — Where Art Lives and Moves</title>
+  <meta name="description" content="Decco is a distributed gallery built into everyday spaces and places — where art lives and moves." />
+  <link rel="canonical" href="https://decco.art/" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Decco — Where Art Lives and Moves" />
   <meta property="og:description" content="A distributed gallery built into everyday spaces and places." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://decco.art/" />
+
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" href="assets/favicon.ico" /> -->
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Decco Home">
-        <!-- If your filename differs, update this path -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top bar -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Decco home">
+        <!-- LOGO: update this path if you rename the file -->
         <img
+          class="brand-logo"
           src="assets/Decco%20Logo.png"
           alt="Decco"
-          class="logo"
+          decoding="async"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
         />
         <span class="brand-fallback" style="display:none;">Decco</span>
       </a>
 
-      <nav class="menu" aria-label="Primary">
+      <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#artists">For Artists</a>
-        <a href="#spaces">For Spaces</a>
+        <a href="#how">How it works</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="btn btn-small" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">
-        Apply / Host
-      </a>
+      <div class="header-cta">
+        <a class="btn btn-primary" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">
+          Apply / Host
+        </a>
+      </div>
     </div>
   </header>
 
-  <main id="top">
+  <main id="main" class="main" role="main">
     <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-card">
-          <h1>A New Way to Showcase &amp; Sell Art.</h1>
-          <p class="subhead">
-            Decco is a distributed gallery built into everyday spaces and places —
-            where art lives and moves.
+    <section id="top" class="hero" aria-label="Decco hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Decco Art Network</p>
+          <h1 class="hero-title">Where Art Lives and Moves.</h1>
+          <p class="hero-subtitle">
+            A distributed gallery built into everyday spaces and places —
+            designed to help art get discovered naturally, and collected without friction.
           </p>
 
-          <div class="cta-row">
-            <a class="btn" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">Apply as an Artist</a>
-            <a class="btn btn-ghost" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">Host Decco Art</a>
-          </div>
-
-          <div class="micro">
-            <span>Decco.Art</span>
-            <span class="dot">•</span>
-            <span>(843) 823-2388</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-bg" role="img" aria-label="Modern interior art placement"></div>
-    </section>
-
-    <!-- VALUE TRIPLES -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="triple">
-          <div class="triple-col">
-            <h3>For Artists</h3>
-            <ul>
-              <li>No upfront costs</li>
-              <li>Real-world exposure</li>
-              <li>Optional events &amp; markets</li>
-              <li>Clear commissions</li>
-              <li>Full ownership retained</li>
-            </ul>
-          </div>
-
-          <div class="triple-col">
-            <h3>For Spaces</h3>
-            <ul>
-              <li>Curated rotation</li>
-              <li>No staffing required</li>
-              <li>No cost to host</li>
-              <li>Simple QR-based discovery</li>
-              <li>Optional revenue share on sales</li>
-            </ul>
-          </div>
-
-          <div class="triple-col">
-            <h3>For Buyers</h3>
-            <ul>
-              <li>Discover art naturally</li>
-              <li>View &amp; collect via QR</li>
-              <li>No gallery markup pressure</li>
-              <li>Support local artists</li>
-              <li>Beautiful placements</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRUST / EXPLAINER -->
-    <section class="section section-soft" id="artists">
-      <div class="container split">
-        <div class="copy">
-          <h2>Trusted &amp; Transparent</h2>
-          <ul class="checklist">
-            <li>Artists retain ownership of all artwork.</li>
-            <li>Insurance is optional and artist-controlled.</li>
-            <li>Clear retrieval and rotation rules.</li>
-            <li>Artists set pricing. Decco routes buyers.</li>
-            <li>Simple, consistent payouts.</li>
-          </ul>
-
-          <div class="cards">
-            <div class="card">
-              <h4>Apply as an Artist</h4>
-              <p>Join the network and get placed in curated real-world environments.</p>
-              <a class="btn btn-wide" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">Submit Your Portfolio</a>
-            </div>
-
-            <div class="card">
-              <h4>Host Art in Your Space</h4>
-              <p>Enhance your environment with rotating, curated art at no cost.</p>
-              <a class="btn btn-wide btn-ghost" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">Submit Your Space</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="aside" id="spaces">
-          <div class="aside-box">
-            <h3>What Decco Does</h3>
-            <p>
-              Decco curates and places artwork in real environments — coffee shops, boutiques,
-              rentals, hospitality, and design-forward spaces — where people naturally connect with it.
-            </p>
-            <p class="muted">
-              No pop-ups. No staffing. No pressure. Just intentional placement and simple QR-based discovery.
-            </p>
-            <a class="link" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">
-              Apply / Host →
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">
+              Apply as an Artist
+            </a>
+            <a class="btn btn-secondary" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">
+              Host Decco Art
             </a>
           </div>
+
+          <ul class="hero-meta" aria-label="Decco contact meta">
+            <li><span class="meta-label">Website</span> <span class="meta-value">Decco.Art</span></li>
+            <li><span class="meta-label">Phone</span> <a class="meta-value" href="tel:+18438232388">(843) 823-2388</a></li>
+            <li><span class="meta-label">Email</span> <span class="meta-value muted">—</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-media" aria-label="Featured placement image">
+          <!-- HERO IMAGE: update filename if needed -->
+          <img
+            src="assets/IMG_2158.jpeg"
+            alt="A modern interior featuring framed art in a calm, design-forward space."
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+          <div class="hero-badge" aria-hidden="true">
+            <span class="dot"></span> Curated placements • Real spaces
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY (placeholder for now) -->
-    <section class="section" id="gallery">
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>What Decco is</h2>
+          <p class="lead">
+            Decco places curated artwork into real environments — homes, hospitality, and design-forward public spaces —
+            where people naturally connect with it.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>For Artists</h3>
+            <p>Distribution without the overhead. Your work is seen in context — where people can imagine it in their own life.</p>
+            <ul>
+              <li>Keep ownership & pricing control</li>
+              <li>Real-world discovery (not endless scrolling)</li>
+              <li>Simple QR-based viewing + inquiry</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>For Spaces</h3>
+            <p>Upgrade your walls with curated art. No staffing. No awkward sales handling. Upside only.</p>
+            <ul>
+              <li>Rotations & refreshes as Decco grows</li>
+              <li>No cost to host</li>
+              <li>Optional revenue share when work sells</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>For Buyers</h3>
+            <p>Discover art organically, without pressure. View the story, details, and next steps in seconds.</p>
+            <ul>
+              <li>See it in a real space</li>
+              <li>Scan → View → Collect</li>
+              <li>Support artists directly</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p class="lead">
+            The MVP is intentionally simple: one link (Tally) handles everything while you validate supply + demand.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h3>Artists apply</h3>
+              <p>Portfolio + basic info. Decco curates for fit, quality, and placement-readiness.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h3>Spaces host</h3>
+              <p>Coffee shops, boutiques, rentals, show units. Decco matches work to the environment.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h3>Buyers discover</h3>
+              <p>They see the work in context. QR routes them to “View / Collect” steps (for now: Tally).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="center">
+          <a class="btn btn-primary" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">Apply / Host</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
       <div class="container">
         <div class="section-head">
           <h2>Gallery</h2>
-          <p class="muted">
-            Coming next: featured placements, current works, and event pop-ups.
-          </p>
+          <p class="lead">A small preview of the vibe. Replace these with real Decco placements as you shoot them.</p>
         </div>
 
-        <div class="gallery-grid">
-          <div class="gallery-tile">
-            <div class="tile-label">Featured Placement</div>
-            <div class="tile-sub">Launching soon</div>
-          </div>
-          <div class="gallery-tile">
-            <div class="tile-label">New Work</div>
-            <div class="tile-sub">Launching soon</div>
-          </div>
-          <div class="gallery-tile">
-            <div class="tile-label">Events &amp; Markets</div>
-            <div class="tile-sub">Launching soon</div>
-          </div>
+        <div class="gallery">
+          <figure class="figure">
+            <!-- GALLERY IMAGE 1 -->
+            <img src="assets/IMG_2157.jpeg" alt="Art in a modern interior placement." loading="lazy" decoding="async" />
+            <figcaption>Art in a modern interior</figcaption>
+          </figure>
+
+          <figure class="figure">
+            <!-- GALLERY IMAGE 2 -->
+            <img src="assets/IMG_2160.jpeg" alt="Boutique placement in a retail or hospitality setting." loading="lazy" decoding="async" />
+            <figcaption>Boutique placement</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="section section-soft" id="contact">
+    <section id="contact" class="section section-soft">
       <div class="container contact">
-        <div>
+        <div class="contact-copy">
           <h2>Contact</h2>
-          <p class="muted">For now, all inquiries run through one simple form.</p>
+          <p class="lead">Right now, all paths funnel into one form. That’s the MVP.</p>
+
+          <div class="contact-meta">
+            <div><span class="meta-label">Website</span><span class="meta-value">Decco.Art</span></div>
+            <div><span class="meta-label">Phone</span><a class="meta-value" href="tel:+18438232388">(843) 823-2388</a></div>
+            <div><span class="meta-label">Email</span><span class="meta-value muted">—</span></div>
+          </div>
         </div>
 
         <div class="contact-box">
-          <div class="contact-row">
-            <span class="label">Website</span>
-            <span class="value">Decco.Art</span>
-          </div>
-          <div class="contact-row">
-            <span class="label">Phone</span>
-            <a class="value" href="tel:+18438232388">(843) 823-2388</a>
-          </div>
-          <div class="contact-row">
-            <span class="label">Email</span>
-            <span class="value muted">—</span>
-          </div>
-
-          <a class="btn btn-wide" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">
-            Apply / Host
+          <h3>Apply / Host / Collect</h3>
+          <p>Use the same form for now — we’ll split flows later once you see what converts.</p>
+          <a class="btn btn-primary btn-block" href="https://tally.so/r/Zj2WQB" target="_blank" rel="noopener">
+            Open the Decco Form
           </a>
+          <p class="fineprint">
+            By continuing, you’ll be routed to Decco’s current intake form.
+          </p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="footer-left">
-        <span class="muted">© <span id="year"></span> Decco</span>
+        <span>© <span id="year"></span> Decco</span>
+        <span class="sep">•</span>
+        <span class="muted">Where Art Lives and Moves</span>
       </div>
-
       <div class="footer-right">
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="#top">Back to top</a>
       </div>
     </div>
   </footer>
