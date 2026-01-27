@@ -66,12 +66,24 @@ a:hover{ opacity: .9; }
   gap: 10px;
   min-width: 160px;
 }
-.brand-logo{ height: 44px; width: auto; }
+.brand-logo{
+  height: 44px;
+  width: auto;
+}
+
 .brand-fallback{
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 28px;
   letter-spacing: .2px;
 }
+
+/* Mobile optimization */
+@media (max-width: 420px){
+  .brand-logo{
+    height: 40px;
+  }
+}
+}}
 .nav{
   display: none;
   gap: 18px;
