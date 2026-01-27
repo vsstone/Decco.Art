@@ -53,6 +53,7 @@ a:hover{ opacity: .9; }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
+
 .header-inner{
   display: flex;
   align-items: center;
@@ -60,15 +61,21 @@ a:hover{ opacity: .9; }
   gap: 14px;
   padding: 14px 0;
 }
+
+/* Brand */
 .brand{
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   min-width: 160px;
+  flex: 0 0 auto;           /* ✅ prevents flex from shrinking brand */
 }
+
 .brand-logo{
-  height: 44px;
+  height: 52px;             /* ✅ larger logo (was 34px) */
   width: auto;
+  max-width: none;          /* ✅ ensures max-width:100% doesn't constrain */
+  flex: 0 0 auto;           /* ✅ prevents logo from shrinking */
 }
 
 .brand-fallback{
@@ -77,13 +84,7 @@ a:hover{ opacity: .9; }
   letter-spacing: .2px;
 }
 
-/* Mobile optimization */
-@media (max-width: 420px){
-  .brand-logo{
-    height: 40px;
-  }
-}
-}}
+/* Nav */
 .nav{
   display: none;
   gap: 18px;
@@ -98,7 +99,12 @@ a:hover{ opacity: .9; }
   background: rgba(17,17,17,.04);
   color: var(--ink);
 }
-.header-cta{ display: flex; align-items: center; }
+
+.header-cta{
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;           /* ✅ keeps CTA from squeezing logo */
+}
 
 /* Buttons */
 .btn{
@@ -137,9 +143,7 @@ h2{
   font-size: 30px;
   letter-spacing: -.2px;
 }
-h3{
-  font-size: 16px;
-}
+h3{ font-size: 16px; }
 .lead{
   margin: 10px 0 0 0;
   color: var(--muted);
@@ -368,6 +372,16 @@ h3{
   padding-top: 16px;
 }
 .sep{ opacity: .6; padding: 0 8px; }
+
+/* ✅ Mobile-first header tuning */
+@media (max-width: 860px){
+  .brand-logo{ height: 46px; }  /* slightly smaller on phones/tablets */
+}
+
+/* Very small phones */
+@media (max-width: 420px){
+  .brand-logo{ height: 42px; }
+}
 
 /* Desktop */
 @media (min-width: 860px){
